@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cronometro.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex flex-col items-center bg-green-900 w-[100%] h-full ">
+    <h1 class="font-bold text-white text-6xl">Ejercicios de Asincronismo</h1>
+    <section>
+        <p id="fecha" class="text-white my-4 text-3xl font-bold"></p>
+    </section>
+    <main class="flex flex-col pt-2 bg-black border-solid border-zinc-400 border-4 rounded-3xl w-[280px] h-[600px] gap-10" id="pantalla-cel">
+        <!--Switch-->
+
+        <!-- Reloj -->
+        <section class=" flex flex-row justify-between">
+            <p id="reloj" class="text-white text-xs font-bold pl-4"></p>
+            <div class="toggle-switch">
+                <label class="switch-label">
+                    <input type="checkbox" class="checkbox" id="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <!--div>
+                <input type="checkbox" id="checkbox">
+            </div-->
+        </section>
+
+        <!-- Cronometro -->
+        <section >
+                
+        </section>
+        <section class="pantalla" class="visible">
+            <div class="timer" Class ="visible">
+                <p id="hours">Hours</p>
+                <span></span>
+                <p id="minutes">Minutes</p>
+                <span></span>
+                <p id="seconds">Seconds</p-->
+            </div>
+            <div>
+                <p id="pantalla_stopwatch" class="visible">
+                    <span id="minuto">00</span><span id="span-1">:</span><span id="segundo">00</span><span id="span-2">.</span><span id="milesima">00</span>
+                </p>
+            </div>
+            
+            <div id="pantalla_timer" class="oculto">    
+             
+                <input type="number" value="0" min="0" max="99" id="timerh" class="oculto">
+                <span id="dospuntos1" class="oculto">:</span> 
+                
+                <input type="number" value="0" min="0" max="59" id="timerm" class="oculto" >
+                <span id="dospuntos2" class="oculto">:</span>
+                
+                <input type="number" value="0" min="0" max="59" id="timers" class="oculto" >
+            </div>
+            
+        </section>
+
+        <section class="captura_tiempo" id="captura_tiempo">
+        
+            <div class="captura">
+                <h3 id="titulo" class="oculto" >Lap times</h3>
+                <p id="captura" class="captura"></p>
+            </div>    
+        </section>
+
+        <section id="botones" class="botones">
+            <!--debe estar visible oculto-->
+            <button id="reset" class="reiniciar boton_reiniciar visible oculto">Reset</button>
+            <!--debe estar visible-->
+            <button id="Lap" class="lap boton_lap visible">Lap</button>
+            <!--debe estar visible oculto-->
+            <button id="stop" class=" pausa boton_stop visible oculto">Stop</button>
+            <!--debe estar visible-->
+            <button id="start" class="inicio boton_start visible" >Start</button>
+            <!--debe estar oculto-->
+            <button id="resume" class="resume boton_resume oculto">Resume</button>
+            <button id="start2" class="start2 boton_start2 oculto">Start2</button>
+            <button id="delete1" class="delete1 boton_delete1 oculto">Delete</button>
+            <button id="pause" class="pause boton_pause oculto">Pause</button>
+            <button id="resume2" class="resume2 boton_resume2 oculto">Resume2</button>
+            
+            
+        </section>
+        <section class="barra1">
+            <button id="alarma">Alarm</button>
+            <button id="world-clock">World clock</button>
+            <button id="stopwatch">Stopwatch</button>
+            <button id="timer1">Timer</button>
+        </section>
+
+    </main>
+</body>
+<script type="module" src="./index.js"></script>
+
+</html>
